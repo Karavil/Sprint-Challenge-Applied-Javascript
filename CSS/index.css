@@ -52,6 +52,7 @@ body {
   align-items: none;
   flex-direction: row;
   position: fixed;
+  z-index: 1999;
   height: 44px;
   background-color: #333;
 }
