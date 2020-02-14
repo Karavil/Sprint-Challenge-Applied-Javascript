@@ -56,7 +56,6 @@ function ArticleCard(article) {
 }
 
 function appendArticles(articlesList) {
-   console.log(articlesList);
    const articleCards = document.querySelector('.cards-container');
    articlesList.forEach(article => {
       articleCards.appendChild(ArticleCard(article));
@@ -70,7 +69,6 @@ function fetchArticles() {
    axios.get(ARTICLES_API).then(response => {
       //This is an object with keys for each article genre
       const articlesByGenre = response.data.articles;
-      console.log(articlesByGenre);
       for (const genre in articlesByGenre) {
          appendArticles(articlesByGenre[genre]);
       }
